@@ -10,7 +10,7 @@ public class bai2 {
 
         Scanner sc = new Scanner(System.in);
         
-        int menu = sc.nextInt();
+       int menu = sc.nextInt();
         
         switch (menu) {
             case 1:
