@@ -2,39 +2,42 @@ import java.util.Scanner;
 
 public class bai2 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("1. Print the rectangle.");
-        System.out.println("2. Print the square triangle.");
-        System.out.println("3. Print the isosceles triangle.");
-        System.out.println("4. Exit.");
-        System.out.println("Please choose.");
-        int times = scanner.nextInt();
-        switch (times) {
+        System.out.println("1. Hiện thị hình chữ nhật?");
+        System.out.println("2. Hiển thị hình tam giác vuông?");
+        System.out.println("3. Hiển thị tam giác cân?");
+        System.out.println("4. Thoát.");
+        System.out.println("Mời bạn chọn.");
+
+        Scanner sc = new Scanner(System.in);
+        
+        int menu = sc.nextInt();
+        
+        switch (menu) {
             case 1:
-                System.out.println("Rectrangle.");
-                for (int i = 1; i <= 4; i++) {
-                    for (int j = 1; j <= 7; j++) {
-                        System.out.print("*" + " ");
+                for (int i = 0; i < 4; i++){
+                    for(int j = 0; j < 10; j++){
+                        System.out.print("* ");
                     }
-                    System.out.println(" ");
+                    System.out.println();
                 }
                 break;
             case 2:
-                System.out.println("Square triangle.");
-                for (int q = 1; q <= 5; q++) {
-                    for (int k = 1; k <= q; k++) {
-                        System.out.print("*" + " ");
+                for(int i = 0; i < 5; i++){
+                    for(int j = 0; j <= i; j++){
+                        System.out.print("* ");
                     }
-                    System.out.println(" ");
+                    System.out.println();
                 }
                 break;
             case 3:
-                System.out.println("Isosceles triangle.");
-                for (int g = 5; g >= 1; g--) {
-                    for (int h = 1; h <= g; h++) {
-                        System.out.print("*" + " ");
+                for (int i = 1; i <=7 ; i++){
+                    for(int j = i; j < 7; j++){
+                        System.out.print(" ");
                     }
-                    System.out.println(" ");
+                    for(int k = 1; k <= 2*i-1; k++){
+                        System.out.print("*");
+                    }
+                    System.out.println();
                 }
                 break;
             case 4:
