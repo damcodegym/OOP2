@@ -1,19 +1,19 @@
 public class bai1 {
     public static void main(String[] args) {
-        int count = 0; // Đếm số lượng số nguyên tố đã tìm thấy
-        int number = 2; // Bắt đầu kiểm tra từ số 2
+        int menu = 0;
+        int main = 2;
 
         System.out.println("20 số nguyên tố đầu tiên là:");
-        while (count < 20) {
-            if (isPrime(number)) {
-                System.out.print(number + " ");
-                count++;
+        while (menu< 20) {
+            if (isPrime(main)) {
+                System.out.print(main + " ");
+
+                menu++;
             }
-            number++;
+            main++;
         }
     }
 
-    // Phương thức kiểm tra xem một số có phải là số nguyên tố hay không
     public static boolean isPrime(int num) {
         if (num <= 1) {
             return false;
